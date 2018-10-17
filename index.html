@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Profil Page</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Profil Saya</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <nav>
@@ -25,8 +25,8 @@
         </div>
         <div class="description">
             <h1>Intan Komariyah</h1>
-            <p>Front End Designer</p>
-            <a href="#" class="buton bg-green">Contact</a>
+            <p>Pelajar</p>
+            <a href="#" class="buton bg-green" onclick="editforms()">Edit</a>
             <a href="#" class="button border-blue">Resume</a>
         </div>
 <div class="information">
@@ -44,7 +44,7 @@
     </div>
     <div class="data">
         <p class="field">Years Experience</p>
-        <p class="number">6</p>
+        <p class="text-gray">5</p>
     </div>
     <div class="data">
         <p class="field">Email</p>
@@ -57,36 +57,76 @@
     <form method="#" action="#">
         <div class="form">
             <label>Name</label>
-            <input type="text" name="name" 
+            <input type="text" name="name">
         </div>
         <div class="form">
             <label>Role</label>
-            <input type="text" name="role" 
+            <input type="text" name="role"> 
         </div>
         <div class="form">
             <label>Availability</label>
-            <input type="text" name="availability" 
+            <input type="text" name="availability">
         </div>
         <div class="form">
             <label>Age</label>
-            <input type="number" name="age" 
+            <input type="number" name="age" >
+        </div>
+        <div class="form">
+        	<label>Region</label>
+        	<select>
+        		<option>Islam</option>
+        		<option>Kristen</option>
+        		<option>Hindu</option>
+        		<option>Budha</option>
+        		<option>Kongucu</option>
+        	</select>
         </div>
         <div class="form">
             <label>Location</label>
-            <input type="text" name="location" 
+            <textarea></textarea>
+            <select>
+            	<option>Jawa Tengah</option>
+            	<option>Jawa Timur</option>
+            	<option>Jawa Barat</option>
+            	<option>Sumatra</option>
+            	<option>Sulawesi</option>
+            	<option>Papua</option>
+            	<option>DKI Jakarta</option>
+            	<option>DI Yogyakarta</option>
+            	<option>Lain-lain</option>
+            </select>
         </div>
         <div class="form">
             <label>Years Experience</label>
-            <input type="number" name="years" 
+            <input type="number" name="years" >
         </div>
         <div class="form">
             <label>Email</label>
-            <input type="text" name="email" 
+            <input type="text" name="email" >
+        </div>
+        <div class="form">
+        	<label>Foto Profile</label>
+        	<input type="file" name="foto">
         </div>
         <div class="form">
             <input type="submit" name="submit" value="SUBMIT" class="button bg-blue">
         </div>
     </form>
 </section>
+
+<script>
+	function showMenu(){
+		var menu = document.getElementById("menu");
+		var box = document.getElementById("box-profile");
+
+		if (menu.style.display === "block") {
+			menu.style.display = "none";
+			box.style.paddingTop = "0px";
+		}else{
+			menu.style.display = "block";
+			box.style.paddingTop = "125px";
+		}
+	}
+</script>
 </body>
 </html>
